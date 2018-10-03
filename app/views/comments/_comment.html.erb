@@ -1,0 +1,8 @@
+<p><strong>Comments</strong></p>
+<% @article.comments.each do |comment| %>
+
+  <p>
+    <%= comment.body %>
+  </p>
+  <hr>
+<% end %>

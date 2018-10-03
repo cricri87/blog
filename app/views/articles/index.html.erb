@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Articles</h1>
+  <p><%= link_to "New Article", new_article_path %></p>
+
+  <div class="article-wrapper">
+    <% @articles.each do |article| %>
+      <h4><%= "#{article.title}" %></h4>
+     <p class="created-at"> This Article was created : <%= article.created_at.strftime(' %b %e %Y') %></p>
+      <p><%= article.text %></p>
+      <hr>
+    <% end %>
+  </div>
+
+</div>
